@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DebugToDeploy — AI Resume Upgrade Prompts</title>
+<style>
+:root {
+  --navy:#0B1220; --blue:#4682B4; --orange:#FF8A00; --white:#fff; --bg:#f5f7fa;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(135deg,#f5f7fa,#eaf1f8); color:var(--navy);
+}
+.container { max-width:1050px; margin:auto; padding:32px 18px 60px; }
+header {
+  background:var(--navy); color:white; border-radius:24px; padding:30px;
+  box-shadow:0 15px 40px rgba(11,18,32,.16); margin-bottom:26px;
+}
+.brand { display:flex; align-items:center; gap:14px; }
+.logo-img {
+  width:58px;height:58px;border-radius:50%;object-fit:cover;
+  display:block;
+  box-shadow:0 0 0 2px rgba(70,130,180,.75);
+}
+h1 { margin:0; font-size:clamp(28px,5vw,46px); }
+.subtitle { margin:12px 0 0; color:#cbd5e1; font-size:16px; line-height:1.55; }
+.highlight { color:#ff9d26; font-weight:800; }
+.card {
+  background:white; border:1px solid #dbe5ef; border-radius:20px;
+  margin:22px 0; overflow:hidden; box-shadow:0 8px 24px rgba(11,18,32,.07);
+}
+.card-top {
+  padding:20px 20px 16px; display:flex; align-items:center;
+  justify-content:space-between; gap:15px; border-bottom:1px solid #edf2f7;
+}
+.card-top h2 { margin:4px 0 0; font-size:22px; }
+.number { color:var(--blue); font-weight:900; letter-spacing:1px; }
+.copy-btn {
+  border:0; background:var(--orange); color:#111827; font-weight:800;
+  padding:12px 17px; border-radius:12px; cursor:pointer; font-size:14px;
+  transition:.2s; white-space:nowrap;
+}
+.copy-btn:hover { transform:translateY(-1px); filter:brightness(1.04); }
+.copy-btn.copied { background:#22c55e; color:white; }
+pre {
+  margin:0; padding:22px; white-space:pre-wrap; word-wrap:break-word;
+  font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color:#1f2937; background:#fbfdff;
+}
+.tip {
+  margin-top:26px; padding:18px 20px; border-left:5px solid var(--orange);
+  background:#fff8ed; border-radius:12px; line-height:1.6;
+}
+footer { text-align:center; color:#64748b; margin-top:30px; }
+@media(max-width:650px) {
+  .container { padding:18px 12px 40px; }
+  header { padding:22px; border-radius:18px; }
+  .card-top { align-items:flex-start; flex-direction:column; }
+  .copy-btn { width:100%; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <div class="brand">
+    <img class="logo-img" src="debugtodeploy_logo.png" alt="DebugToDeploy logo">
+    <div>
+      <strong style="font-size:20px;">DebugToDeploy</strong><br>
+      <span style="color:#a9bdd5;">@debugtodeploy_</span>
+    </div>
+  </div>
+  <h1 style="margin-top:26px;">AI Resume Upgrade Prompts</h1>
+  <p class="subtitle">Copy-ready prompts for <span class="highlight">DevOps, Cloud, Kubernetes &amp; SRE</span> engineers. Paste your real experience into any AI tool and improve how you present it.</p>
+</header>
+
+
+    <section class="card">
+      <div class="card-top">
+        <div>
+          <span class="number">01</span>
+          <h2>DevOps Engineer</h2>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt('prompt1', this)">⧉ Copy Prompt</button>
+      </div>
+      <pre id="prompt1">I am a DevOps Engineer with [X] years of experience.
+
+Here are my current resume points:
+[PASTE YOUR CURRENT RESUME OR KEY RESPONSIBILITIES]
+
+Please help me:
+1. Rewrite these points using strong action verbs.
+2. Make them impactful and ATS-friendly.
+3. Highlight key DevOps skills, tools and achievements.
+4. Add measurable outcomes where possible, without inventing numbers.
+5. Suggest relevant keywords for a DevOps Engineer role based on current industry standards.
+6. Keep the content concise and professional.
+
+Use only my actual experience. Do not fabricate projects, tools, certifications or metrics.
+Return improved bullet points and a short list of suggested keywords.</pre>
+    </section>
+    
+    <section class="card">
+      <div class="card-top">
+        <div>
+          <span class="number">02</span>
+          <h2>Cloud Engineer</h2>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt('prompt2', this)">⧉ Copy Prompt</button>
+      </div>
+      <pre id="prompt2">I am a Cloud Engineer with [X] years of experience.
+
+Here are my current resume points:
+[PASTE YOUR CURRENT RESUME OR KEY RESPONSIBILITIES]
+
+Please help me:
+1. Rewrite these points with strong action verbs.
+2. Make them impactful and ATS-friendly.
+3. Highlight key cloud services, architecture skills and achievements.
+4. Add quantifiable results where possible, without inventing data.
+5. Suggest relevant keywords for a Cloud Engineer role focused on [AWS/Azure/GCP].
+6. Keep the content concise, technical and professional.
+
+Use only my real experience. Do not fabricate services, certifications, projects or metrics.
+Return improved bullet points, missing keywords and recommendations.</pre>
+    </section>
+    
+    <section class="card">
+      <div class="card-top">
+        <div>
+          <span class="number">03</span>
+          <h2>Kubernetes Engineer</h2>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt('prompt3', this)">⧉ Copy Prompt</button>
+      </div>
+      <pre id="prompt3">I am a Kubernetes Engineer with [X] years of experience.
+
+Here are my current resume points:
+[PASTE YOUR CURRENT RESUME OR KEY RESPONSIBILITIES]
+
+Please help me:
+1. Rewrite these points with strong action verbs.
+2. Make them impactful and ATS-friendly.
+3. Highlight Kubernetes skills, tools and achievements.
+4. Add measurable outcomes where possible, without inventing data.
+5. Suggest relevant keywords for a Kubernetes Engineer role based on current industry standards.
+6. Keep the content concise and professional.
+
+Use my actual experience only. Do not fabricate clusters, tools, certifications, projects or metrics.
+Consider Kubernetes, Helm, Ingress, HPA, Argo CD, Terraform, AKS/EKS/GKE, monitoring and troubleshooting when relevant.</pre>
+    </section>
+    
+    <section class="card">
+      <div class="card-top">
+        <div>
+          <span class="number">04</span>
+          <h2>SRE / Reliability Engineer</h2>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt('prompt4', this)">⧉ Copy Prompt</button>
+      </div>
+      <pre id="prompt4">I am an SRE (Reliability Engineer) with [X] years of experience.
+
+Here are my current resume points:
+[PASTE YOUR CURRENT RESUME OR KEY RESPONSIBILITIES]
+
+Please help me:
+1. Rewrite these points using strong action verbs.
+2. Make them impactful and ATS-friendly.
+3. Highlight key SRE skills, tools, reliability practices and achievements.
+4. Add measurable outcomes where possible, without inventing data.
+5. Suggest relevant keywords for an SRE role based on current industry standards.
+6. Keep the content concise, technical and professional.
+
+Use my real experience only. Do not fabricate incidents, metrics, tools or projects.
+Highlight SLI/SLO, error budgets, incident response, monitoring, logging, alerting, automation, MTTR and availability when supported by my experience.</pre>
+    </section>
+    
+
+<div class="tip">
+  <strong>⚠️ Keep it real:</strong> AI should improve the presentation of your actual experience—not invent projects, tools, certifications or metrics. Always review the generated resume before submitting it.
+</div>
+
+<footer>
+  <strong>DebugToDeploy</strong> · Simplifying DevOps, Cloud and Real-World Engineering for Everyone.
+</footer>
+</div>
+
+<script>
+async function copyPrompt(id, button) {
+  const text = document.getElementById(id).innerText;
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    const area = document.createElement('textarea');
+    area.value = text; document.body.appendChild(area);
+    area.select(); document.execCommand('copy'); area.remove();
+  }
+  const old = button.innerHTML;
+  button.innerHTML = '✓ Copied!';
+  button.classList.add('copied');
+  setTimeout(() => {
+    button.innerHTML = old;
+    button.classList.remove('copied');
+  }, 1600);
+}
+</script>
+</body>
+</html>
