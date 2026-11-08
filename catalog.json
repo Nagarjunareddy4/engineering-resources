@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "Nagarjunareddy4/engineering-resources",
-  "generatedAt": "2026-11-08T07:06:38Z",
+  "generatedAt": "2026-11-08T08:00:22Z",
   "categories": [
     {
       "name": "Ai Resume Prompts",
@@ -19,7 +19,7 @@
     {
       "name": "Argocd",
       "path": "argocd",
-      "indexPath": null,
+      "indexPath": "argocd/index.html",
       "items": [
         {
           "title": "01 Argocd Fundamentals",
@@ -60,14 +60,19 @@
           "title": "08 Argocd Best Practices",
           "path": "argocd/08-argocd-best-practices.md",
           "type": "markdown"
+        },
+        {
+          "title": "Overview",
+          "path": "argocd/index.html",
+          "type": "html"
         }
       ],
-      "count": 8
+      "count": 9
     },
     {
       "name": "Docker",
       "path": "Docker",
-      "indexPath": null,
+      "indexPath": "Docker/index.html",
       "items": [
         {
           "title": "01 Docker Fundamentals",
@@ -108,9 +113,14 @@
           "title": "08 Docker Security Best Practices",
           "path": "Docker/08-docker-security-best-practices.md",
           "type": "markdown"
+        },
+        {
+          "title": "Overview",
+          "path": "Docker/index.html",
+          "type": "html"
         }
       ],
-      "count": 8
+      "count": 9
     },
     {
       "name": "Forward Deployed Engineer Guide",
@@ -128,7 +138,7 @@
     {
       "name": "Git",
       "path": "Git",
-      "indexPath": null,
+      "indexPath": "Git/index.html",
       "items": [
         {
           "title": "01 Git Fundamentals",
@@ -154,14 +164,19 @@
           "title": "05 Git Best Practices",
           "path": "Git/05-git-best-practices.md",
           "type": "markdown"
+        },
+        {
+          "title": "Overview",
+          "path": "Git/index.html",
+          "type": "html"
         }
       ],
-      "count": 5
+      "count": 6
     },
     {
       "name": "Helm",
       "path": "helm",
-      "indexPath": null,
+      "indexPath": "helm/index.html",
       "items": [
         {
           "title": "01 Helm Fundamentals",
@@ -202,14 +217,19 @@
           "title": "08 Helm Best Practices",
           "path": "helm/08-helm-best-practices.md",
           "type": "markdown"
+        },
+        {
+          "title": "Overview",
+          "path": "helm/index.html",
+          "type": "html"
         }
       ],
-      "count": 8
+      "count": 9
     },
     {
       "name": "Kubernetes",
       "path": "kubernetes",
-      "indexPath": null,
+      "indexPath": "kubernetes/index.html",
       "items": [
         {
           "title": "01 Kubernetes Fundamentals",
@@ -265,14 +285,19 @@
           "title": "11 Kubernetes Troubleshooting",
           "path": "kubernetes/11-kubernetes-troubleshooting.md",
           "type": "markdown"
+        },
+        {
+          "title": "Overview",
+          "path": "kubernetes/index.html",
+          "type": "html"
         }
       ],
-      "count": 11
+      "count": 12
     },
     {
       "name": "Linux",
       "path": "Linux",
-      "indexPath": null,
+      "indexPath": "Linux/index.html",
       "items": [
         {
           "title": "01 Linux Fundamentals",
@@ -318,77 +343,87 @@
           "title": "09 Linux Interview Questions",
           "path": "Linux/09-linux-interview-questions.md",
           "type": "markdown"
+        },
+        {
+          "title": "Overview",
+          "path": "Linux/index.html",
+          "type": "html"
         }
       ],
-      "count": 9
+      "count": 10
     },
     {
-      "name": "Terrafom",
-      "path": "terrafom",
-      "indexPath": null,
+      "name": "Terraform",
+      "path": "terraform",
+      "indexPath": "terraform/index.html",
       "items": [
         {
           "title": "01 Terraform Fundamentals",
-          "path": "terrafom/01-terraform-fundamentals.md",
+          "path": "terraform/01-terraform-fundamentals.md",
           "type": "markdown"
         },
         {
           "title": "02 Terraform State",
-          "path": "terrafom/02-terraform-state.md",
+          "path": "terraform/02-terraform-state.md",
           "type": "markdown"
         },
         {
           "title": "03 Terraform Backend",
-          "path": "terrafom/03-terraform-backend.md",
+          "path": "terraform/03-terraform-backend.md",
           "type": "markdown"
         },
         {
           "title": "04 Terraform Modules",
-          "path": "terrafom/04-terraform-modules.md",
+          "path": "terraform/04-terraform-modules.md",
           "type": "markdown"
         },
         {
           "title": "05 Terraform Workspaces",
-          "path": "terrafom/05-terraform-workspaces.md",
+          "path": "terraform/05-terraform-workspaces.md",
           "type": "markdown"
         },
         {
           "title": "06 Terraform Variables",
-          "path": "terrafom/06-terraform-variables.md",
+          "path": "terraform/06-terraform-variables.md",
           "type": "markdown"
         },
         {
           "title": "07 Terraform Functions",
-          "path": "terrafom/07-terraform-functions.md",
+          "path": "terraform/07-terraform-functions.md",
           "type": "markdown"
         },
         {
           "title": "08 Terraform Lifecycle",
-          "path": "terrafom/08-terraform-lifecycle.md",
+          "path": "terraform/08-terraform-lifecycle.md",
           "type": "markdown"
         },
         {
           "title": "09 Best Practices",
-          "path": "terrafom/09-best-practices.md",
+          "path": "terraform/09-best-practices.md",
           "type": "markdown"
         },
         {
           "title": "10 Interview Guide",
-          "path": "terrafom/10-interview-guide.md",
+          "path": "terraform/10-interview-guide.md",
           "type": "markdown"
         },
         {
           "title": "11 Terraform Cheatsheet",
-          "path": "terrafom/11-terraform-cheatsheet.md",
+          "path": "terraform/11-terraform-cheatsheet.md",
           "type": "markdown"
         },
         {
+          "title": "Overview",
+          "path": "terraform/index.html",
+          "type": "html"
+        },
+        {
           "title": "Terraform Fundamentals",
-          "path": "terrafom/terraform-fundamentals.md",
+          "path": "terraform/terraform-fundamentals.md",
           "type": "markdown"
         }
       ],
-      "count": 12
+      "count": 13
     },
     {
       "name": "General",
