@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DebugToDeploy's practical Forward Deployed Engineer career guide: skills, learning resources, projects, interview preparation, market insights and a 90-day roadmap.">
+<meta name="theme-color" content="#081323">
+<title>Forward Deployed Engineer Career Guide 2026 | DebugToDeploy</title>
+<style>
+:root{
+  --navy:#081323;--navy2:#10233d;--blue:#4682b4;--blue2:#dcecf9;
+  --orange:#ff8a00;--orange-soft:#fff0dc;--ink:#101a2b;--muted:#586779;
+  --paper:#f3f6f9;--white:#fff;--line:#d9e3ed;--green:#16845b;
+  --shadow:0 16px 42px rgba(8,19,35,.08);--radius:26px;--max:1180px;
+}
+.brand { display:flex; align-items:center; gap:14px; }
+.logo-img {
+  width:58px;height:58px;border-radius:50%;object-fit:cover;
+  display:block;
+  box-shadow:0 0 0 2px rgba(70,130,180,.75);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65}
+a{color:#17669b;text-decoration:none}
+a:hover{text-decoration:underline}
+button{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
+.hero{background:var(--navy);color:white;border-radius:0 0 38px 38px;margin:14px auto 34px;padding:48px clamp(24px,6vw,72px) 54px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero:after{content:"";position:absolute;width:340px;height:340px;border:1px solid rgba(70,130,180,.25);border-radius:50%;right:-90px;top:-150px;box-shadow:0 0 0 28px rgba(70,130,180,.04),0 0 0 58px rgba(70,130,180,.035)}
+.brand{display:flex;align-items:center;gap:16px;position:relative;z-index:1;margin-bottom:62px}
+.logo{width:74px;height:74px;border:3px solid #286b94;border-radius:50%;display:grid;place-items:center;font-size:29px;font-weight:850;letter-spacing:-4px;color:#fff;background:#06152b;flex:none}
+.logo span{color:var(--orange)}
+.brand-name{font-size:clamp(24px,4vw,40px);font-weight:650;letter-spacing:-1.5px;line-height:1.1}
+.brand-handle{font-size:clamp(17px,2.7vw,27px);color:#9eb7ce;line-height:1.3}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#ffd09a;background:rgba(255,138,0,.13);border:1px solid rgba(255,138,0,.35);padding:7px 13px;border-radius:99px;font-weight:700;font-size:13px;letter-spacing:.07em;text-transform:uppercase;position:relative;z-index:1}
+h1{font-size:clamp(42px,7.5vw,82px);line-height:1.04;letter-spacing:-.055em;max-width:900px;margin:23px 0 20px;font-weight:760;position:relative;z-index:1}
+.accent{color:var(--orange)}
+.hero-copy{font-size:clamp(19px,2.6vw,29px);color:#c5d0dc;max-width:850px;line-height:1.55;margin:0;position:relative;z-index:1}
+.hero-copy strong{color:var(--orange);font-weight:650}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;position:relative;z-index:1}
+.pill{border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:7px 12px;color:#d6e2ee;font-size:13px}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:26px;align-items:start}
+.sidebar{position:sticky;top:18px;background:white;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);max-height:calc(100vh - 36px);overflow:auto}
+.side-title{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#758397;font-weight:800;margin:0 0 12px}
+.nav a{display:block;padding:9px 11px;border-radius:10px;color:#33445a;font-size:14px;font-weight:600}
+.nav a:hover,.nav a.active{background:#eaf3fa;color:#145b8b;text-decoration:none}
+.progressbox{margin-top:18px;padding:14px;background:#f5f8fb;border-radius:14px}
+.progressline{height:7px;background:#dce5ed;border-radius:20px;overflow:hidden;margin-top:9px}
+.progressfill{height:100%;width:0;background:var(--orange);transition:width .2s}
+.content{min-width:0}
+.intro-card,.section,.cta{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,4vw,38px);box-shadow:var(--shadow);margin-bottom:22px}
+.intro-card{border-top:5px solid var(--orange)}
+.section{scroll-margin-top:90px}
+.section-head{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
+.num{font-size:25px;font-weight:800;color:#2b82b8;line-height:1.2;min-width:44px}
+h2{font-size:clamp(27px,4vw,39px);letter-spacing:-.04em;line-height:1.15;margin:0 0 8px}
+h3{font-size:20px;line-height:1.3;margin:24px 0 10px;letter-spacing:-.02em}
+h4{font-size:16px;margin:0 0 7px}
+.lead{font-size:17px;color:var(--muted);margin:0}
+p{margin:10px 0}
+.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tile{border:1px solid var(--line);border-radius:17px;padding:18px;background:#fff}
+.tile.blue{background:#f0f7fc;border-color:#cfe2f1}
+.tile.orange{background:#fff8ef;border-color:#ffe0bb}
+.tile.dark{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tile.dark p{color:#c5d0dc}
+.kicker{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--blue)}
+.callout{border-left:4px solid var(--orange);background:#fff7ec;padding:15px 18px;border-radius:0 14px 14px 0;margin:18px 0}
+.callout.blue{border-color:var(--blue);background:#f0f7fc}
+ul,ol{padding-left:22px}
+li{margin:7px 0}
+.checklist{list-style:none;padding:0}
+.checklist li{display:flex;gap:10px;align-items:flex-start;margin:10px 0}
+.checklist input{accent-color:var(--orange);width:17px;height:17px;margin-top:5px;flex:none}
+.checklist label{cursor:pointer}
+.resource{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;border-bottom:1px solid var(--line);padding:12px 0}
+.resource:last-child{border-bottom:0}
+.resource small{display:block;color:var(--muted);margin-top:3px}
+.tag{display:inline-block;background:#eaf3fa;color:#245f89;border-radius:99px;padding:3px 9px;font-size:11px;font-weight:750;white-space:nowrap}
+.tag.orange{background:#fff0dc;color:#9a5200}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:15px}
+table{border-collapse:collapse;width:100%;min-width:590px;background:white}
+th,td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#eff5fa;color:#25384e;font-size:13px}
+td{font-size:14px}
+tr:last-child td{border-bottom:0}
+.flow{counter-reset:step;display:grid;gap:12px}
+.flow-item{display:grid;grid-template-columns:42px 1fr;gap:13px;align-items:start;padding:15px;border:1px solid var(--line);border-radius:15px}
+.flow-item:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--blue2);color:#145b8b;font-weight:850}
+.bar{display:flex;gap:10px;align-items:center;margin:10px 0}
+.bar-label{width:170px;flex:none;font-size:13px;font-weight:650}
+.bar-track{height:11px;background:#e8eef3;border-radius:20px;overflow:hidden;flex:1}
+.bar-fill{height:100%;background:var(--blue);border-radius:20px}
+.bar-val{width:48px;text-align:right;font-size:13px;font-weight:800}
+details{border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0;background:white}
+summary{font-weight:750;cursor:pointer}
+details p{color:var(--muted)}
+.copyrow{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#f4f7fa;border:1px solid var(--line);padding:12px 14px;border-radius:12px;margin:10px 0}
+.copybtn{border:0;border-radius:9px;background:var(--navy);color:white;padding:7px 11px;font-size:12px;font-weight:750;cursor:pointer}
+.copybtn:hover{background:#1b4168}
+.cta{background:var(--navy);color:white;border:0;text-align:center;padding:36px}
+.cta p{color:#c5d0dc}
+.cta a{display:inline-block;background:var(--orange);color:#101a2b;font-weight:850;padding:12px 20px;border-radius:99px;margin:8px}
+.footer{color:#6b7888;text-align:center;font-size:13px;padding:24px 0 44px}
+.note{font-size:13px;color:#657488}
+.stat{font-size:35px;font-weight:850;letter-spacing:-.04em;color:var(--orange);line-height:1.1}
+.statlabel{font-size:13px;color:var(--muted);margin-top:7px}
+.searchbox{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:11px;margin:10px 0 12px;font:inherit}
+.toplink{font-size:13px;font-weight:700}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:relative;top:auto;max-height:none}.nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}.grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.wrap{width:min(100% - 22px,var(--max))}.hero{padding:28px 22px 34px;margin-top:8px;border-radius:0 0 26px 26px}.brand{margin-bottom:42px;gap:12px}.logo{width:58px;height:58px;font-size:23px}.grid,.grid.three{grid-template-columns:1fr}.nav{grid-template-columns:1fr 1fr}.section-head{gap:10px}.num{min-width:34px;font-size:21px}.bar-label{width:120px;font-size:12px}.resource{display:block}.resource .tag{margin-top:7px}.intro-card,.section{border-radius:20px}}
+@media print{body{background:white}.hero,.cta{print-color-adjust:exact;-webkit-print-color-adjust:exact}.sidebar{display:none}.layout{display:block}.section,.intro-card{box-shadow:none;break-inside:avoid}.hero{margin:0 0 20px}.copybtn{display:none}a{color:inherit;text-decoration:underline}}
+</style>
+</head>
+<body>
+<header class="hero wrap" id="top">
+  <div class="brand">
+    <img class="logo-img" src="debugtodeploy_logo.png" alt="DebugToDeploy logo">
+    <div><div class="brand-name">DebugToDeploy</div><div class="brand-handle">@debugtodeploy_</div></div>
+  </div>
+  <div class="eyebrow">Career roadmap · 2026 edition</div>
+  <h1>Forward Deployed<br><span class="accent">Engineer</span> Career Guide</h1>
+  <p class="hero-copy">A practical roadmap for engineers who want to <strong>build, integrate and deploy</strong> solutions that solve real customer problems.</p>
+  <div class="hero-meta"><span class="pill">Beginner to job-ready</span><span class="pill">Skills + projects + interviews</span><span class="pill">Curated learning links</span></div>
+</header>
+
+<div class="wrap layout">
+<aside class="sidebar">
+  <p class="side-title">On this page</p>
+  <input class="searchbox" id="navSearch" type="search" placeholder="Find a section…" aria-label="Search sections">
+  <nav class="nav" id="nav">
+    <a href="#overview">01 · Understand FDE</a>
+    <a href="#responsibilities">02 · What FDEs do</a>
+    <a href="#skills">03 · Skill map</a>
+    <a href="#learning">04 · Learn the skills</a>
+    <a href="#projects">05 · Build projects</a>
+    <a href="#production">06 · Production readiness</a>
+    <a href="#customer">07 · Customer engineering</a>
+    <a href="#market">08 · Market insights</a>
+    <a href="#companies">09 · Companies & jobs</a>
+    <a href="#interviews">10 · Interview prep</a>
+    <a href="#roadmap">11 · 90-day roadmap</a>
+    <a href="#checklist">12 · Job-ready checklist</a>
+    <a href="#sources">Sources & notes</a>
+  </nav>
+  <div class="progressbox">
+    <strong style="font-size:13px">Your learning progress</strong>
+    <div class="progressline"><div class="progressfill" id="progressFill"></div></div>
+    <small class="muted" id="progressText">0 of 12 topics completed</small>
+  </div>
+</aside>
+
+<main class="content">
+<section class="intro-card" id="overview">
+  <div class="section-head"><div class="num">01</div><div><h2>What is a Forward Deployed Engineer?</h2><p class="lead">An engineer who works close to customers and takes technical solutions from an unclear problem to a working production outcome.</p></div></div>
+  <p>A <strong>Forward Deployed Engineer (FDE)</strong> combines software engineering, systems integration, deployment and customer problem-solving. Instead of building only for a broad product roadmap, an FDE works with a specific customer or industry context, adapts technology to that environment and helps make the solution successful in production.</p>
+  <div class="callout"><strong>In simple terms:</strong> An FDE does not stop at a demo. They help make the solution work with the customer's data, systems, security requirements, workflows and users.</div>
+  <div class="grid three">
+    <div class="tile blue"><div class="kicker">Build</div><h3>Make it work</h3><p class="muted">Prototype, code, configure and customize the solution.</p></div>
+    <div class="tile orange"><div class="kicker">Integrate</div><h3>Fit the environment</h3><p class="muted">Connect APIs, data, identity, cloud and existing systems.</p></div>
+    <div class="tile"><div class="kicker">Deliver</div><h3>Own the outcome</h3><p class="muted">Deploy, observe, troubleshoot and improve real usage.</p></div>
+  </div>
+  <p class="note">FDE responsibilities vary by company. Some roles are deeply hands-on software engineering; others include solution architecture, implementation or technical consulting. Read the actual job description, not just the title.</p>
+</section>
+
+<section class="section" id="responsibilities">
+  <div class="section-head"><div class="num">02</div><div><h2>What does an FDE actually do?</h2><p class="lead">A typical engagement moves through these stages. Real projects may loop between them.</p></div></div>
+  <div class="flow">
+    <div class="flow-item"><div><h4>Discover the customer problem</h4><p class="muted">Interview users, understand business goals, map workflows, identify constraints and agree on success measures.</p></div></div>
+    <div class="flow-item"><div><h4>Prototype and build</h4><p class="muted">Create a working proof of concept, write application code, configure models or services and validate assumptions quickly.</p></div></div>
+    <div class="flow-item"><div><h4>Integrate existing systems</h4><p class="muted">Connect APIs, databases, identity providers, data pipelines, internal tools and enterprise workflows.</p></div></div>
+    <div class="flow-item"><div><h4>Deploy securely to production</h4><p class="muted">Handle environments, secrets, access controls, CI/CD, reliability, scaling, compliance and rollback plans.</p></div></div>
+    <div class="flow-item"><div><h4>Observe, troubleshoot and improve</h4><p class="muted">Monitor reliability, cost, latency, quality and adoption. Fix issues and feed recurring needs back to product teams.</p></div></div>
+  </div>
+  <div class="callout blue"><strong>How success is measured:</strong> Not just code shipped. Look at time-to-value, successful adoption, reliability, task completion, customer outcomes and whether the solution can be maintained.</div>
+</section>
+
+<section class="section" id="skills">
+  <div class="section-head"><div class="num">03</div><div><h2>FDE skill map</h2><p class="lead">Build a T-shaped skill set: strong engineering fundamentals, plus enough breadth to deliver across the customer environment.</p></div></div>
+  <div class="grid">
+    <div class="tile blue"><h3>Software engineering</h3><ul><li>Python or TypeScript/JavaScript</li><li>Data structures and debugging</li><li>REST APIs, webhooks and authentication</li><li>Backend services and testing</li><li>Git, code review and documentation</li></ul></div>
+    <div class="tile"><h3>Cloud & infrastructure</h3><ul><li>AWS, Azure or Google Cloud</li><li>Docker and Kubernetes fundamentals</li><li>CI/CD and Infrastructure as Code</li><li>Networking, DNS, TLS and IAM</li><li>Logs, metrics, tracing and alerting</li></ul></div>
+    <div class="tile orange"><h3>Applied AI engineering</h3><ul><li>LLM APIs and structured outputs</li><li>Embeddings, retrieval and RAG</li><li>Tool calling and agent workflows</li><li>Evaluation, guardrails and human review</li><li>Latency, token and inference cost controls</li></ul></div>
+    <div class="tile"><h3>Data & integration</h3><ul><li>SQL and data modelling</li><li>PostgreSQL and vector search concepts</li><li>ETL/ELT and data quality</li><li>Queues, events and distributed systems</li><li>Enterprise identity and system integration</li></ul></div>
+    <div class="tile"><h3>Production engineering</h3><ul><li>Security and secrets management</li><li>Reliability, scaling and resilience</li><li>Observability and incident response</li><li>Performance and cost optimization</li><li>Release, rollback and change management</li></ul></div>
+    <div class="tile"><h3>Customer & business skills</h3><ul><li>Discovery and requirement clarification</li><li>Clear technical communication</li><li>Workshop and demo facilitation</li><li>Trade-off and expectation management</li><li>Translate business goals into metrics</li></ul></div>
+  </div>
+  <div class="callout"><strong>Prioritization tip:</strong> Start with programming, APIs, SQL and one cloud platform. Add production deployment and observability. Then learn applied AI patterns if your target roles involve AI/GenAI solutions. You do not need to master every cloud or every framework.</div>
+</section>
+
+<section class="section" id="learning">
+  <div class="section-head"><div class="num">04</div><div><h2>Learning resources with direct links</h2><p class="lead">Prefer official documentation and hands-on tutorials. Choose one resource per topic and build while learning.</p></div></div>
+  <h3>Programming & backend</h3>
+  <div class="resource"><div><strong>Python Tutorial</strong><small>Core syntax, data structures, modules and exceptions.</small></div><a href="https://docs.python.org/3/tutorial/" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>FastAPI Tutorial</strong><small>Build APIs, validation, dependency injection and OpenAPI docs.</small></div><a href="https://fastapi.tiangolo.com/tutorial/" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>MDN Web Docs</strong><small>HTTP, JavaScript, browser and web platform fundamentals.</small></div><a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>GitHub Skills</strong><small>Guided exercises for GitHub workflows and collaboration.</small></div><a href="https://skills.github.com/" target="_blank" rel="noopener">Open ↗</a></div>
+  <h3>Databases, APIs & systems</h3>
+  <div class="resource"><div><strong>PostgreSQL Documentation</strong><small>SQL, indexing, transactions, roles and administration.</small></div><a href="https://www.postgresql.org/docs/" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>HTTP Semantics – RFC 9110</strong><small>Understand methods, status codes, caching and HTTP behavior.</small></div><a href="https://www.rfc-editor.org/rfc/rfc9110" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>System Design Primer</strong><small>Community-maintained introduction to scalable system design.</small></div><a href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener">Open ↗</a></div>
+  <h3>Cloud, containers & infrastructure</h3>
+  <div class="resource"><div><strong>Microsoft Learn – Azure</strong><small>Free learning paths for Azure services and architecture.</small></div><a href="https://learn.microsoft.com/en-us/training/azure/" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>AWS Skill Builder</strong><small>Cloud learning plans and hands-on training.</small></div><a href="https://skillbuilder.aws/" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>Google Cloud Skills Boost</strong><small>Cloud labs and role-based learning paths.</small></div><a href="https://www.cloudskillsboost.google/" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>Docker Get Started</strong><small>Images, containers, volumes and networking.</small></div><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>Kubernetes Tutorials</strong><small>Deployments, services, configuration and cluster basics.</small></div><a href="https://kubernetes.io/docs/tutorials/" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>Terraform Tutorials</strong><small>Infrastructure as Code and reusable configurations.</small></div><a href="https://developer.hashicorp.com/terraform/tutorials" target="_blank" rel="noopener">Open ↗</a></div>
+  <h3>AI, LLMs & agents</h3>
+  <div class="resource"><div><strong>OpenAI API Documentation</strong><small>Models, responses, tools, structured output and production guidance.</small></div><a href="https://platform.openai.com/docs/" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>Hugging Face Learn</strong><small>LLMs, NLP, agents and open-source AI learning tracks.</small></div><a href="https://huggingface.co/learn" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>LangGraph Documentation</strong><small>Build stateful, controllable agent workflows.</small></div><a href="https://docs.langchain.com/oss/python/langgraph/overview" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>Microsoft AI Foundry</strong><small>Build, evaluate and operate AI applications on Azure.</small></div><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>OpenAI Evals Guide</strong><small>Evaluate model and application behavior systematically.</small></div><a href="https://platform.openai.com/docs/guides/evals" target="_blank" rel="noopener">Open ↗</a></div>
+  <div class="resource"><div><strong>OWASP Top 10 for LLM Applications</strong><small>Understand common risks in LLM-powered applications.</small></div><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank" rel="noopener">Open ↗</a></div>
+</section>
+
+<section class="section" id="projects">
+  <div class="section-head"><div class="num">05</div><div><h2>Portfolio projects that demonstrate FDE work</h2><p class="lead">Build end-to-end systems that show you can understand a problem, integrate technology and deliver a production-style outcome.</p></div></div>
+  <div class="tile blue">
+    <span class="tag">Project 01 · Applied AI</span><h3>Enterprise knowledge assistant (RAG)</h3>
+    <p>Build an assistant that answers questions from a company's internal documents, with citations and access controls.</p>
+    <strong>Suggested stack</strong><p class="muted">Python · FastAPI · PostgreSQL/pgvector · LLM API · Docker · Cloud hosting</p>
+    <strong>Must demonstrate</strong><ul><li>Document ingestion, chunking, embeddings and retrieval.</li><li>Source citations and “I don't know” behavior when evidence is missing.</li><li>Authentication, tenant isolation and document permissions.</li><li>Evaluation dataset, quality checks, logging and cost monitoring.</li></ul>
+  </div>
+  <div class="tile orange" style="margin-top:14px">
+    <span class="tag orange">Project 02 · Agent integration</span><h3>Customer support workflow agent</h3>
+    <p>Create an assistant that can classify a request, look up account data and prepare a support ticket. Require human approval before consequential actions.</p>
+    <strong>Suggested stack</strong><p class="muted">Python/TypeScript · REST APIs · LLM tool calling · PostgreSQL · tracing</p>
+    <strong>Must demonstrate</strong><ul><li>Tool schemas, validation, retries and idempotency.</li><li>Human approval, audit trail and safe failure behavior.</li><li>Role-based permissions and protection against prompt injection.</li><li>Metrics for task completion, escalation and latency.</li></ul>
+  </div>
+  <div class="tile" style="margin-top:14px">
+    <span class="tag">Project 03 · Cloud & DevOps</span><h3>Customer-ready deployment platform</h3>
+    <p>Containerize a service, provision infrastructure and deploy it through a repeatable pipeline into a cloud environment.</p>
+    <strong>Suggested stack</strong><p class="muted">Docker · Kubernetes · Terraform · GitHub Actions/Azure Pipelines · Prometheus · Grafana</p>
+    <strong>Must demonstrate</strong><ul><li>Environment separation, secrets handling and least-privilege access.</li><li>CI/CD, health checks, rollout and rollback.</li><li>Logs, metrics, alerts and a basic runbook.</li><li>Architecture diagram, setup guide and cost notes.</li></ul>
+  </div>
+  <div class="callout"><strong>Portfolio rule:</strong> A deployed, documented project with trade-offs and a short demo is stronger evidence than a repository containing only tutorial code. Never upload real customer data, secrets or employer code.</div>
+</section>
+
+<section class="section" id="production">
+  <div class="section-head"><div class="num">06</div><div><h2>Production readiness: what separates a demo from a real solution?</h2><p class="lead">FDEs are expected to think beyond “it works on my machine”.</p></div></div>
+  <div class="grid">
+    <div class="tile"><h4>Security & privacy</h4><p class="muted">Identity, authorization, secrets, encryption, data retention, tenant isolation and audit logs.</p></div>
+    <div class="tile"><h4>Reliability</h4><p class="muted">Timeouts, retries, circuit breakers, idempotency, graceful degradation and rollback.</p></div>
+    <div class="tile"><h4>Observability</h4><p class="muted">Structured logs, metrics, traces, dashboards, alerts and actionable runbooks.</p></div>
+    <div class="tile"><h4>Performance & cost</h4><p class="muted">Latency budgets, caching, load tests, resource limits and AI inference cost controls.</p></div>
+    <div class="tile"><h4>AI quality</h4><p class="muted">Groundedness, evaluation sets, guardrails, human review and regression tests.</p></div>
+    <div class="tile"><h4>Maintainability</h4><p class="muted">Readable code, tests, versioning, documentation and reusable integrations.</p></div>
+  </div>
+  <h3>Production deployment checklist</h3>
+  <ul class="checklist" id="prodChecklist">
+    <li><input type="checkbox" id="p1"><label for="p1">Requirements and measurable success criteria are agreed.</label></li>
+    <li><input type="checkbox" id="p2"><label for="p2">Authentication, authorization and secrets are configured securely.</label></li>
+    <li><input type="checkbox" id="p3"><label for="p3">Errors, timeouts, retries and failure paths are handled.</label></li>
+    <li><input type="checkbox" id="p4"><label for="p4">Tests and deployment/rollback procedures are documented.</label></li>
+    <li><input type="checkbox" id="p5"><label for="p5">Logs, metrics, alerts and runbooks are available.</label></li>
+    <li><input type="checkbox" id="p6"><label for="p6">Privacy, data access and retention requirements are reviewed.</label></li>
+    <li><input type="checkbox" id="p7"><label for="p7">Performance, reliability and cost have been evaluated.</label></li>
+  </ul>
+</section>
+
+<section class="section" id="customer">
+  <div class="section-head"><div class="num">07</div><div><h2>Customer-facing engineering</h2><p class="lead">The customer side is not an optional soft skill. It shapes the problem you solve and whether the solution gets adopted.</p></div></div>
+  <h3>A simple discovery framework</h3>
+  <ol>
+    <li><strong>Context:</strong> What workflow or business process are we improving?</li>
+    <li><strong>Pain:</strong> What is slow, costly, risky or frustrating today?</li>
+    <li><strong>Users:</strong> Who will use the solution and who approves it?</li>
+    <li><strong>Constraints:</strong> What systems, data, security, compliance or budget limits exist?</li>
+    <li><strong>Outcome:</strong> What measurable result would make this successful?</li>
+    <li><strong>Validation:</strong> What is the smallest safe prototype that can test the assumption?</li>
+  </ol>
+  <div class="tile blue"><h4>Example: turn a vague request into an engineering brief</h4><p><strong>Request:</strong> “We want an AI assistant for our support team.”</p><p><strong>Better questions:</strong> Which support workflow? Which systems hold the source of truth? What data may the assistant access? Which actions require human approval? How will accuracy and time saved be measured?</p><p><strong>Deliverable:</strong> A scoped use case, architecture, integration plan, risks, success metrics and a staged rollout.</p></div>
+  <h3>Useful communication habits</h3>
+  <ul><li>Explain trade-offs without hiding uncertainty.</li><li>Share working prototypes early and label limitations clearly.</li><li>Write concise decision records and implementation notes.</li><li>Escalate risks early; do not promise dates before understanding dependencies.</li><li>Translate technical progress into customer outcomes.</li></ul>
+</section>
+
+<section class="section" id="market">
+  <div class="section-head"><div class="num">08</div><div><h2>FDE market insights: India, 2026</h2><p class="lead">The role is emerging quickly, but the title is not yet standardized across employers. Treat survey findings as indicators, not guaranteed job counts.</p></div></div>
+  <div class="grid three">
+    <div class="tile"><div class="stat">60%</div><div class="statlabel">of surveyed enterprises reported defined FDE/FDE-like hiring intentions within 12 months.</div></div>
+    <div class="tile"><div class="stat">88%</div><div class="statlabel">of surveyed enterprises expect demand for FDE capabilities to rise by 2030.</div></div>
+    <div class="tile"><div class="stat">77%</div><div class="statlabel">of surveyed enterprises consider production deployment an important FDE capability.</div></div>
+  </div>
+  <p class="note">Source: Scaler and CyberMedia Research (CMR), India’s FDE Opportunity Report 2026. Surveyed 1,000+ engineers and 200 enterprise decision-makers. These percentages describe respondents, not the entire Indian job market.</p>
+  <h3>What employers are signalling</h3>
+  <ul>
+    <li>Applied AI and GenAI customization are important use cases, but integration with existing enterprise systems remains central.</li>
+    <li>Production deployment and troubleshooting are important assessment areas.</li>
+    <li>Customer engagement, communication and translating ambiguous needs into working systems matter alongside coding.</li>
+    <li>Some companies perform FDE-like work under titles such as AI Engineer, Solutions Engineer, Customer Engineer or Implementation Engineer.</li>
+  </ul>
+  <h3>Compensation: read the numbers carefully</h3>
+  <div class="callout blue"><strong>There is no universal FDE salary band.</strong> Compensation depends on experience, employer type, location, technical depth, customer ownership and whether the role is product engineering, consulting or services delivery.</div>
+  <p>The Scaler–CMR report discusses a 21–30% compensation premium as a range frequently expected by survey respondents. That is an expectation reported in the study, not proof of a guaranteed market-wide salary premium. Some reported income figures are based on a small group of engineers already in explicit FDE roles; they should not be treated as entry-level offers or typical salaries.</p>
+  <p>When evaluating an offer, compare base pay, variable pay, equity, benefits, travel expectations, on-call responsibilities, customer-facing load and the actual engineering ownership.</p>
+  <h3>Market data sources</h3>
+  <ul>
+    <li><a href="https://www.scaler.com/topics/india-fde-opportunity-report/" target="_blank" rel="noopener">Scaler × CMR: India’s FDE Opportunity Report 2026</a></li>
+    <li><a href="https://www.business-standard.com/industry/news/only-1-pc-of-engineers-work-in-fde-roles-despite-rising-ai-demand-report-126102300449_1.html" target="_blank" rel="noopener">Business Standard: FDE hiring intentions and skills gap</a></li>
+    <li><a href="https://www.cielhr.com/news/press-release/ai-implementation-drives-130-growth-in-demand-for-forward-deployed-engineers-ciel-hr-study" target="_blank" rel="noopener">CIEL HR: FDE hiring analysis (August 2026)</a></li>
+  </ul>
+</section>
+
+<section class="section" id="companies">
+  <div class="section-head"><div class="num">09</div><div><h2>Companies, job titles & where to search</h2><p class="lead">Use these links as starting points. Openings change frequently; a company name here is not a claim that it is hiring for every FDE title right now.</p></div></div>
+  <div class="resource"><div><strong>Palantir</strong><small>Known for the Forward Deployed Engineer model.</small></div><a href="https://www.palantir.com/careers/" target="_blank" rel="noopener">Careers ↗</a></div>
+  <div class="resource"><div><strong>OpenAI</strong><small>Explore deployment, solutions and customer-facing engineering roles.</small></div><a href="https://openai.com/careers/" target="_blank" rel="noopener">Careers ↗</a></div>
+  <div class="resource"><div><strong>Anthropic</strong><small>Explore applied AI, deployment and solutions roles.</small></div><a href="https://www.anthropic.com/careers" target="_blank" rel="noopener">Careers ↗</a></div>
+  <div class="resource"><div><strong>Databricks</strong><small>Explore AI, field engineering and customer-facing technical roles.</small></div><a href="https://www.databricks.com/company/careers" target="_blank" rel="noopener">Careers ↗</a></div>
+  <div class="resource"><div><strong>Cisco</strong><small>Example FDE role listing in Bengaluru; check current availability.</small></div><a href="https://careers.cisco.com/global/en/job/CISCISGLOBAL2027880EXTERNALENGLOBAL/Forward-Deployed-Engineer" target="_blank" rel="noopener">Example role ↗</a></div>
+  <div class="resource"><div><strong>Accenture</strong><small>Example India FDE roles focused on enterprise AI deployment.</small></div><a href="https://www.accenture.com/in-en/careers/jobdetails?id=R00339500_en" target="_blank" rel="noopener">Example role ↗</a></div>
+  <div class="resource"><div><strong>Wipro</strong><small>Example FDE role involving AI solution integration and deployment.</small></div><a href="https://careers.wipro.com/job/Forward-Deployed-Engineer-%28FDE%29/210720-en_US/" target="_blank" rel="noopener">Example role ↗</a></div>
+  <div class="resource"><div><strong>Deployment.io</strong><small>Example remote US/India FDE role; verify location and eligibility.</small></div><a href="https://deployment.io/careers/" target="_blank" rel="noopener">Careers ↗</a></div>
+  <h3>Search beyond the exact FDE title</h3>
+  <div class="copyrow"><span>Forward Deployed Engineer</span><button class="copybtn" data-copy="Forward Deployed Engineer">Copy</button></div>
+  <div class="copyrow"><span>Forward Deployed Software Engineer</span><button class="copybtn" data-copy="Forward Deployed Software Engineer">Copy</button></div>
+  <div class="copyrow"><span>AI Solutions Engineer / Applied AI Engineer</span><button class="copybtn" data-copy="AI Solutions Engineer OR Applied AI Engineer">Copy</button></div>
+  <div class="copyrow"><span>Customer Engineer / Deployment Engineer</span><button class="copybtn" data-copy="Customer Engineer OR Deployment Engineer">Copy</button></div>
+  <div class="copyrow"><span>Solutions Architect / Implementation Engineer</span><button class="copybtn" data-copy="Solutions Architect OR Implementation Engineer">Copy</button></div>
+  <p class="note">Check the day-to-day responsibilities. Some adjacent titles are pre-sales or support-heavy; others involve hands-on product engineering and production ownership.</p>
+  <div class="grid">
+    <div class="tile blue"><h4>LinkedIn Jobs</h4><a href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener">Search openings ↗</a></div>
+    <div class="tile"><h4>Naukri</h4><a href="https://www.naukri.com/" target="_blank" rel="noopener">Search India roles ↗</a></div>
+    <div class="tile"><h4>Wellfound</h4><a href="https://wellfound.com/jobs" target="_blank" rel="noopener">Startup roles ↗</a></div>
+    <div class="tile"><h4>Company career pages</h4><p class="muted">Apply through the employer's official listing where possible.</p></div>
+  </div>
+</section>
+
+<section class="section" id="interviews">
+  <div class="section-head"><div class="num">10</div><div><h2>FDE interview preparation</h2><p class="lead">Prepare to demonstrate how you think, build, integrate, deploy and communicate—not only how you solve coding exercises.</p></div></div>
+  <details open><summary>Software engineering & APIs</summary><ul><li>Design a REST API for a multi-tenant application. How would you secure it?</li><li>Explain authentication versus authorization.</li><li>How do you handle retries, timeouts and duplicate requests?</li><li>How would you debug a slow API in production?</li></ul></details>
+  <details><summary>Cloud, DevOps & production</summary><ul><li>Walk through deploying a containerized service to Kubernetes.</li><li>How would you design CI/CD with a safe rollback strategy?</li><li>How do you manage secrets and least-privilege access?</li><li>Which metrics, logs and traces would you collect after deployment?</li></ul></details>
+  <details><summary>AI, LLMs & RAG</summary><ul><li>Explain a RAG architecture and its failure modes.</li><li>How would you evaluate answer quality and reduce hallucinations?</li><li>How do you secure tool-calling agents?</li><li>How would you measure latency, token usage and cost?</li></ul></details>
+  <details><summary>System design</summary><ul><li>Design an enterprise knowledge assistant for multiple customers.</li><li>How would you integrate an AI assistant with an existing CRM?</li><li>How would you handle tenant isolation and sensitive data?</li><li>How would you design for partial outages and provider rate limits?</li></ul></details>
+  <details><summary>Customer scenarios</summary><ul><li>A customer says “we need AI” but cannot define the problem. What do you do?</li><li>A demo works but fails with real customer data. How do you investigate?</li><li>A stakeholder requests a risky feature before launch. How do you respond?</li><li>How would you explain a technical trade-off to a non-technical leader?</li></ul></details>
+  <div class="callout"><strong>Interview method:</strong> Clarify the goal → state assumptions → sketch the design → discuss trade-offs → cover security and failure modes → define how you would validate success.</div>
+</section>
+
+<section class="section" id="roadmap">
+  <div class="section-head"><div class="num">11</div><div><h2>Your 90-day FDE learning roadmap</h2><p class="lead">A practical sequence for someone who can study consistently. Adjust the pace to your current experience and available time.</p></div></div>
+  <div class="grid">
+    <div class="tile blue"><span class="tag">Days 1–30</span><h3>Engineering foundations</h3><ul><li>Python fundamentals and clean code.</li><li>REST APIs, FastAPI and authentication.</li><li>SQL and PostgreSQL basics.</li><li>Git, tests and Docker.</li></ul><strong>Deliverable:</strong><p class="muted">A tested API with a database, authentication and container setup.</p></div>
+    <div class="tile orange"><span class="tag orange">Days 31–60</span><h3>AI + cloud integration</h3><ul><li>LLM API and structured output.</li><li>RAG and vector search.</li><li>Tool calling and agent workflows.</li><li>Deploy to one cloud platform.</li></ul><strong>Deliverable:</strong><p class="muted">A deployed AI assistant with evaluation, logging and access controls.</p></div>
+    <div class="tile"><span class="tag">Days 61–90</span><h3>Production & customer readiness</h3><ul><li>Observability, security and reliability.</li><li>System design and integration.</li><li>Discovery, demos and documentation.</li><li>Portfolio and interview practice.</li></ul><strong>Deliverable:</strong><p class="muted">An end-to-end project, architecture diagram, demo and clear case study.</p></div>
+    <div class="tile dark"><h3>Weekly rhythm</h3><p>Learn a concept, implement it, test it, document what you learned and explain the trade-offs.</p><p><strong>Suggested split:</strong> 30% learning · 50% building · 20% documenting and reviewing.</p></div>
+  </div>
+  <p class="note">This is a learning plan, not a promise of employment or a fixed time-to-readiness. Prior experience, project depth and interview expectations differ.</p>
+</section>
+
+<section class="section" id="checklist">
+  <div class="section-head"><div class="num">12</div><div><h2>Job-ready self-assessment</h2><p class="lead">Use this checklist to identify gaps. Your selections are saved only in this browser while local storage is available.</p></div></div>
+  <ul class="checklist" id="readyChecklist">
+    <li><input type="checkbox" id="r1" data-progress><label for="r1">I can build and test a backend API.</label></li>
+    <li><input type="checkbox" id="r2" data-progress><label for="r2">I can work with SQL and a relational database.</label></li>
+    <li><input type="checkbox" id="r3" data-progress><label for="r3">I can integrate third-party APIs securely.</label></li>
+    <li><input type="checkbox" id="r4" data-progress><label for="r4">I can containerize and deploy an application.</label></li>
+    <li><input type="checkbox" id="r5" data-progress><label for="r5">I understand cloud IAM, networking and secrets.</label></li>
+    <li><input type="checkbox" id="r6" data-progress><label for="r6">I can monitor and troubleshoot a production-style service.</label></li>
+    <li><input type="checkbox" id="r7" data-progress><label for="r7">I can explain an LLM/RAG application and its limitations.</label></li>
+    <li><input type="checkbox" id="r8" data-progress><label for="r8">I have at least one deployed, documented end-to-end project.</label></li>
+    <li><input type="checkbox" id="r9" data-progress><label for="r9">I can turn an ambiguous customer request into a technical plan.</label></li>
+    <li><input type="checkbox" id="r10" data-progress><label for="r10">I can explain architecture choices and trade-offs clearly.</label></li>
+    <li><input type="checkbox" id="r11" data-progress><label for="r11">I have practised technical and customer scenario interviews.</label></li>
+    <li><input type="checkbox" id="r12" data-progress><label for="r12">I can show measurable outcomes from my projects.</label></li>
+  </ul>
+  <div class="callout blue"><strong>How to use this:</strong> Do not aim to tick every box immediately. Pick the weakest two areas, build a small project around them and revisit this checklist.</div>
+</section>
+
+<section class="section" id="sources">
+  <div class="section-head"><div class="num">↗</div><div><h2>Sources, references & editorial notes</h2><p class="lead">Use original documentation for technical learning and primary research for market claims.</p></div></div>
+  <h3>Market research and reporting</h3>
+  <ul>
+    <li><a href="https://www.scaler.com/topics/india-fde-opportunity-report/" target="_blank" rel="noopener">Scaler × CyberMedia Research – India’s FDE Opportunity Report 2026</a></li>
+    <li><a href="https://www.business-standard.com/industry/news/only-1-pc-of-engineers-work-in-fde-roles-despite-rising-ai-demand-report-126102300449_1.html" target="_blank" rel="noopener">Business Standard – FDE demand, skills and compensation expectations</a></li>
+    <li><a href="https://www.cielhr.com/news/press-release/ai-implementation-drives-130-growth-in-demand-for-forward-deployed-engineers-ciel-hr-study" target="_blank" rel="noopener">CIEL HR – FDE hiring analysis, August 2026</a></li>
+  </ul>
+  <h3>Important notes</h3>
+  <ul>
+    <li>Market statistics are time-sensitive and should be rechecked before republishing or making career decisions.</li>
+    <li>Survey percentages describe the respondents and methodology of each study; they are not a census of all employers or vacancies.</li>
+    <li>Salary expectations, self-reported compensation and job-posting salary ranges are different measures. Do not treat them as interchangeable.</li>
+    <li>Company career links are provided as discovery starting points. Verify the live listing, location, experience level and eligibility before applying.</li>
+    <li>This guide is educational and does not guarantee an interview, job offer or compensation outcome.</li>
+  </ul>
+  <p class="note">Last reviewed: November 2026 · Maintained by DebugToDeploy. Review the market section periodically and update links when source pages change.</p>
+</section>
+
+<div class="cta">
+  <div class="eyebrow">Build · Deploy · Learn</div>
+  <h2 style="font-size:clamp(30px,5vw,48px);margin:18px 0 10px">Turn engineering skills into <span class="accent">real-world impact.</span></h2>
+  <p>Keep learning with DebugToDeploy. Explore practical engineering guides, projects and career resources.</p>
+  <a href="https://debugtodeploy.com/" target="_blank" rel="noopener">Explore DebugToDeploy ↗</a>
+  <a href="#top" style="background:transparent;color:white;border:1px solid #71849a">Back to top ↑</a>
+</div>
+</main>
+</div>
+<footer class="footer wrap">© 2026 DebugToDeploy · Helping engineers understand how real production systems work.</footer>
+
+<script>
+(function(){
+  const search=document.getElementById('navSearch');
+  const links=[...document.querySelectorAll('#nav a')];
+  search.addEventListener('input',()=>{
+    const q=search.value.toLowerCase();
+    links.forEach(a=>a.style.display=a.textContent.toLowerCase().includes(q)?'block':'none');
+  });
+  const boxes=[...document.querySelectorAll('[data-progress]')];
+  const fill=document.getElementById('progressFill');
+  const text=document.getElementById('progressText');
+  const key='d2d-fde-guide-checklist-v1';
+  try{
+    const saved=JSON.parse(localStorage.getItem(key)||'{}');
+    boxes.forEach(b=>b.checked=!!saved[b.id]);
+  }catch(e){}
+  function update(){
+    const count=boxes.filter(b=>b.checked).length;
+    fill.style.width=(count/boxes.length*100)+'%';
+    text.textContent=count+' of '+boxes.length+' checklist items completed';
+    try{const state={};boxes.forEach(b=>state[b.id]=b.checked);localStorage.setItem(key,JSON.stringify(state));}catch(e){}
+  }
+  boxes.forEach(b=>b.addEventListener('change',update));update();
+  document.querySelectorAll('.copybtn').forEach(btn=>btn.addEventListener('click',async()=>{
+    const original=btn.textContent;
+    try{await navigator.clipboard.writeText(btn.dataset.copy);btn.textContent='Copied';}
+    catch(e){btn.textContent='Select text';}
+    setTimeout(()=>btn.textContent=original,1400);
+  }));
+  const sections=[...document.querySelectorAll('main section[id]')];
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));
+      }
+    });
+  },{rootMargin:'-20% 0px -70% 0px'});
+  sections.forEach(s=>observer.observe(s));
+})();
+</script>
+</body>
+</html>
