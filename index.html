@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a29">
+  <meta name="description" content="A curated engineering knowledge hub by DebugToDeploy. Explore practical guides, roadmaps, commands, projects and interview resources.">
+  <title>Engineering Resources | DebugToDeploy</title>
+  <style>
+    :root {
+      --navy:#111a29; --navy-2:#172438; --steel:#4682b4; --orange:#ff8a00;
+      --ink:#182335; --muted:#66758a; --paper:#f2f5f8; --line:#dce4ed;
+      --white:#fff; --shadow:0 18px 48px rgba(17,26,41,.08);
+    }
+    .brand { display:flex; align-items:center; gap:14px; }
+    .logo-img {
+      width:58px;height:58px;border-radius:50%;object-fit:cover;
+      display:block;
+      box-shadow:0 0 0 2px rgba(70,130,180,.75);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit}
+    .shell{width:min(1180px,calc(100% - 48px));margin:13px auto 64px}
+    .hero{position:relative;overflow:hidden;min-height:530px;padding:48px 6.1% 54px;background:var(--navy);color:#fff;border-radius:0 0 38px 38px;box-shadow:var(--shadow)}
+    .hero:before,.hero:after{content:"";position:absolute;pointer-events:none;border:1px solid rgba(70,130,180,.24);border-radius:50%}
+    .hero:before{width:340px;height:340px;right:-88px;top:-150px;box-shadow:0 0 0 28px rgba(70,130,180,.035),0 0 0 58px rgba(70,130,180,.025)}
+    .hero:after{width:180px;height:180px;right:48px;top:-100px;border-color:rgba(70,130,180,.18)}
+    .brand{position:relative;z-index:1;display:flex;align-items:center;gap:15px;margin-bottom:64px}
+    .brand-mark{width:60px;height:60px;display:grid;place-items:center;border:2px solid #386b99;border-radius:50%;font-weight:850;font-size:21px;letter-spacing:-1.5px;background:#0b1422;flex:none}
+    .brand-mark span{color:var(--orange)}
+    .brand-name{font-size:clamp(25px,3vw,38px);font-weight:750;line-height:1.05;letter-spacing:-1.4px}
+    .brand-handle{margin-top:5px;color:#9db4cb;font-size:clamp(15px,2vw,23px)}
+    .eyebrow{position:relative;z-index:1;display:inline-flex;padding:10px 14px;border:1px solid rgba(255,138,0,.55);border-radius:99px;background:rgba(255,138,0,.11);color:#ffc17a;font-size:12px;font-weight:750;letter-spacing:.09em;text-transform:uppercase}
+    h1{position:relative;z-index:1;max-width:900px;margin:24px 0 20px;font-size:clamp(44px,6.4vw,78px);line-height:1.08;letter-spacing:-.055em;font-weight:820}
+    h1 .accent{color:var(--orange)}
+    .intro{position:relative;z-index:1;max-width:830px;margin:0;color:#c2ccd8;font-size:clamp(18px,2.2vw,28px);line-height:1.55;font-weight:380}
+    .intro .accent{color:var(--orange)}
+    .pills{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+    .pill{padding:9px 13px;border:1px solid rgba(185,202,221,.25);border-radius:99px;color:#c9d3df;font-size:12px}
+    .toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;margin:34px 0 22px;align-items:center}
+    .search-wrap{display:flex;align-items:center;gap:12px;padding:0 17px;height:54px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 5px 18px rgba(17,26,41,.035)}
+    .search-wrap svg{color:#8493a6;flex:none}
+    .search-wrap input{width:100%;border:0;outline:0;background:transparent;color:var(--ink);font:inherit;font-size:15px}
+    .count{color:var(--muted);font-size:13px;white-space:nowrap}
+    .layout{display:grid;grid-template-columns:255px minmax(0,1fr);gap:24px;align-items:start}
+    .sidebar,.content-panel{background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 8px 28px rgba(17,26,41,.035)}
+    .sidebar{position:sticky;top:18px;padding:20px}
+    .section-label{margin:0 0 15px;color:#75869c;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .category-nav{display:grid;gap:5px}
+    .category-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:11px 12px;border:0;border-radius:11px;background:transparent;color:#45546a;text-align:left;font:inherit;font-size:13px;cursor:pointer}
+    .category-btn:hover,.category-btn.active{background:#eef4fa;color:#173b5d}
+    .category-btn .num{color:#91a0b1;font-size:11px}
+    .content-panel{min-height:420px;padding:26px;border-top:5px solid var(--orange)}
+    .content-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}
+    .content-head h2{margin:0;font-size:25px;letter-spacing:-.7px}
+    .content-head p{margin:7px 0 0;color:var(--muted);font-size:13px;line-height:1.5}
+    .status{color:#728198;font-size:12px;white-space:nowrap}
+    .category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .category-card{display:block;padding:18px;border:1px solid var(--line);border-radius:16px;background:#fff;text-decoration:none;transition:transform .18s,border-color .18s,box-shadow .18s}
+    .category-card:hover{transform:translateY(-2px);border-color:#9bb9d4;box-shadow:0 10px 24px rgba(17,26,41,.07)}
+    .card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .folder-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#edf4fa;color:var(--steel)}
+    .arrow{color:#9aa8b8}
+    .category-card h3{margin:14px 0 5px;font-size:17px}
+    .category-card p{margin:0;color:var(--muted);font-size:12px}
+    .resource-list{display:grid;gap:9px}
+    .resource{display:flex;align-items:center;gap:13px;padding:13px 14px;border:1px solid #e6ebf1;border-radius:13px;text-decoration:none;transition:background .15s,border-color .15s}
+    .resource:hover{background:#f7fafd;border-color:#b8cddd}
+    .file-icon{width:34px;height:34px;display:grid;place-items:center;flex:none;border-radius:10px;background:#f0f4f8;color:#59718b}
+    .resource-main{min-width:0;flex:1}
+    .resource-title{display:block;overflow:hidden;color:#243349;font-size:14px;font-weight:650;text-overflow:ellipsis;white-space:nowrap}
+    .resource-path{display:block;overflow:hidden;margin-top:4px;color:#8290a2;font-size:11px;text-overflow:ellipsis;white-space:nowrap}
+    .resource-type{color:#8492a4;font-size:10px;text-transform:uppercase;letter-spacing:.06em}
+    .empty{padding:42px 18px;text-align:center;color:var(--muted)}
+    .empty strong{display:block;margin-bottom:7px;color:#34445a}
+    .footer{display:flex;justify-content:space-between;gap:15px;margin-top:25px;padding:0 5px;color:#8b98a8;font-size:11px}
+    .footer a{color:#62758b;text-decoration:none}
+    .error{padding:14px;border:1px solid #f0d3b5;border-radius:12px;background:#fff8f0;color:#80501c;font-size:13px;line-height:1.5}
+    @media(max-width:760px){
+      .shell{width:min(100% - 24px,1180px);margin-top:0}
+      .hero{min-height:auto;padding:30px 25px 38px;border-radius:0 0 27px 27px}
+      .brand{margin-bottom:48px}.brand-mark{width:49px;height:49px;font-size:18px}
+      h1{font-size:clamp(40px,10vw,58px)}
+      .toolbar{grid-template-columns:1fr}.count{padding-left:3px}
+      .layout{grid-template-columns:1fr}.sidebar{position:static}
+      .category-nav{display:flex;overflow-x:auto;padding-bottom:3px}
+      .category-btn{width:auto;white-space:nowrap;gap:12px}
+      .content-panel{padding:18px}
+    }
+    @media(max-width:480px){.category-grid{grid-template-columns:1fr}.content-head{display:block}.status{display:block;margin-top:9px}.pills{gap:7px}.pill{font-size:11px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="brand">
+        <img class="logo-img" src="debugtodeploy_logo.png" alt="DebugToDeploy logo">
+        <div>
+          <div class="brand-name">DebugToDeploy</div>
+          <div class="brand-handle">@debugtodeploy_</div>
+        </div>
+      </div>
+      <div class="eyebrow">ENGINEERING KNOWLEDGE HUB · 2026 EDITION</div>
+      <h1>Engineering <span class="accent">Resources</span></h1>
+      <p class="intro">A practical knowledge hub for engineers who want to <span class="accent">learn, build</span> and deploy solutions that solve real-world problems.</p>
+      <div class="pills">
+        <span class="pill">Beginner to job-ready</span>
+        <span class="pill">Skills + projects + interviews</span>
+        <span class="pill">Curated learning resources</span>
+      </div>
+    </header>
+
+    <section class="toolbar" aria-label="Resource search">
+      <label class="search-wrap">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+        <input id="search" type="search" placeholder="Search topics, documents or folders..." autocomplete="off">
+      </label>
+      <div class="count" id="summary" aria-live="polite">Loading resource catalog…</div>
+    </section>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <p class="section-label">Browse categories</p>
+        <nav class="category-nav" id="categoryNav" aria-label="Resource categories">
+          <button class="category-btn active" data-category="all">All resources <span class="num">—</span></button>
+        </nav>
+      </aside>
+
+      <section class="content-panel">
+        <div class="content-head">
+          <div>
+            <h2 id="viewTitle">Explore the library</h2>
+            <p id="viewDescription">Browse all engineering guides and learning resources in one place.</p>
+          </div>
+          <span class="status" id="updated">Catalog loading</span>
+        </div>
+        <div id="results" class="category-grid">
+          <div class="empty"><strong>Loading your resources…</strong>Fetching the latest catalog.</div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> DebugToDeploy · Engineering Resources</span>
+      <a href="https://github.com/Nagarjunareddy4/engineering-resources" target="_blank" rel="noopener">View repository ↗</a>
+    </footer>
+  </main>
+
+  <script>
+    const REPO = "Nagarjunareddy4/engineering-resources";
+    const BRANCH = "main";
+    const PAGES_BASE = "https://nagarjunareddy4.github.io/engineering-resources/";
+    const CATALOG_URL = "./catalog.json";
+
+    const state = { catalog: null, category: "all", query: "" };
+    const $ = (id) => document.getElementById(id);
+
+    function escapeHTML(value) {
+      return String(value ?? "").replace(/[&<>"']/g, ch => ({
+        "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+      })[ch]);
+    }
+    function prettyName(value) {
+      return String(value || "").replace(/[-_]/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    }
+    function pageUrl(path, type) {
+      const clean = String(path || "").split("/").map(encodeURIComponent).join("/");
+      if (type === "markdown") return `https://github.com/${REPO}/blob/${BRANCH}/${clean}`;
+      return PAGES_BASE + clean;
+    }
+    function iconFor(type) {
+      return type === "html" ? "↗" : type === "markdown" ? "M↓" : "•";
+    }
+    function allItems() {
+      return (state.catalog?.categories || []).flatMap(category =>
+        (category.items || []).map(item => ({...item, category: category.name, categoryPath: category.path}))
+      );
+    }
+    function filteredItems() {
+      const query = state.query.trim().toLowerCase();
+      return allItems().filter(item => {
+        const categoryMatch = state.category === "all" || item.categoryPath === state.category;
+        const text = `${item.title} ${item.path} ${item.category}`.toLowerCase();
+        return categoryMatch && (!query || text.includes(query));
+      });
+    }
+    function renderNav() {
+      const categories = state.catalog.categories || [];
+      const total = allItems().length;
+      $("categoryNav").innerHTML =
+        `<button class="category-btn ${state.category === "all" ? "active" : ""}" data-category="all">All resources <span class="num">${total}</span></button>` +
+        categories.map(c => `<button class="category-btn ${state.category === c.path ? "active" : ""}" data-category="${escapeHTML(c.path)}">${escapeHTML(c.name)} <span class="num">${c.count}</span></button>`).join("");
+      $("categoryNav").querySelectorAll("button").forEach(button => {
+        button.addEventListener("click", () => {
+          state.category = button.dataset.category;
+          render();
+        });
+      });
+    }
+    function categoryCard(category) {
+      const href = category.indexPath ? pageUrl(category.indexPath, "html") : "#";
+      const clickable = category.indexPath
+        ? `href="${escapeHTML(href)}"`
+        : `href="#" data-open-category="${escapeHTML(category.path)}"`;
+      return `<a class="category-card" ${clickable}>
+        <div class="card-top"><span class="folder-icon">▰</span><span class="arrow">↗</span></div>
+        <h3>${escapeHTML(category.name)}</h3>
+        <p>${category.count} ${category.count === 1 ? "resource" : "resources"} · ${category.indexPath ? "Open category index" : "Browse documents"}</p>
+      </a>`;
+    }
+    function resourceRow(item) {
+      const url = pageUrl(item.path, item.type);
+      const label = item.type === "markdown" ? "Markdown · GitHub" : "HTML page";
+      return `<a class="resource" href="${escapeHTML(url)}" target="_blank" rel="noopener">
+        <span class="file-icon">${iconFor(item.type)}</span>
+        <span class="resource-main"><span class="resource-title">${escapeHTML(item.title)}</span><span class="resource-path">${escapeHTML(item.path)}</span></span>
+        <span class="resource-type">${label}</span>
+      </a>`;
+    }
+    function render() {
+      if (!state.catalog) return;
+      renderNav();
+      const items = filteredItems();
+      const category = state.catalog.categories.find(c => c.path === state.category);
+      $("viewTitle").textContent = state.query ? "Search results" : category ? category.name : "Explore the library";
+      $("viewDescription").textContent = state.query
+        ? `Matching resources for “${state.query}”.`
+        : category ? `${category.count} resources in this category.` : "Choose a category or search across every discovered document.";
+      $("summary").textContent = `${items.length} of ${allItems().length} resources`;
+      if (state.category === "all" && !state.query) {
+        $("results").className = "category-grid";
+        $("results").innerHTML = (state.catalog.categories || []).map(categoryCard).join("") ||
+          `<div class="empty"><strong>No categories found</strong>Add HTML or Markdown documents to your repository and push your changes.</div>`;
+        $("results").querySelectorAll("[data-open-category]").forEach(link => link.addEventListener("click", event => {
+          event.preventDefault(); state.category = link.dataset.openCategory; render();
+        }));
+      } else {
+        $("results").className = "resource-list";
+        $("results").innerHTML = items.map(resourceRow).join("") ||
+          `<div class="empty"><strong>No matching documents</strong>Try another search term or select a different category.</div>`;
+      }
+      $("updated").textContent = state.catalog.generatedAt
+        ? `Updated ${new Date(state.catalog.generatedAt).toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"})}`
+        : "Catalog";
+    }
+    async function init() {
+      $("year").textContent = new Date().getFullYear();
+      $("search").addEventListener("input", event => { state.query = event.target.value; render(); });
+      try {
+        const response = await fetch(`${CATALOG_URL}?v=${Date.now()}`, {cache:"no-store"});
+        if (!response.ok) throw new Error(`catalog.json returned HTTP ${response.status}`);
+        state.catalog = await response.json();
+        if (!Array.isArray(state.catalog.categories)) throw new Error("Catalog format is invalid");
+        render();
+      } catch (error) {
+        $("summary").textContent = "Catalog unavailable";
+        $("updated").textContent = "Needs setup";
+        $("results").className = "";
+        $("results").innerHTML = `<div class="error"><strong>Unable to load the resource catalog.</strong><br>${escapeHTML(error.message)}<br><br>Commit the generated <code>catalog.json</code> file and ensure GitHub Pages is publishing the repository root.</div>`;
+      }
+    }
+    init();
+  </script>
+</body>
+</html>
