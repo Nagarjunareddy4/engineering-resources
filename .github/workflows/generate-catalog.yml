@@ -6,7 +6,7 @@ on:
       - main
       - master
     paths:
-      - '**/*.md'
+      #- '**/*.md'
       - '**/*.html'
       - '!index.html'
       - '!catalog.json'
